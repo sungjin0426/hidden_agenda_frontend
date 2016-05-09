@@ -1,0 +1,252 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: url(http://www.softheme.com/wp-content/themes/twentyten/images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.photo-layout {
+
+float: left;
+display: flex;
+/*overflow:visible;*/
+border-spacing: 20px;
+padding: 20px;
+
+
+}
+
+
+.photo img {
+  width: 400px;
+  height: 250px;
+  margin: 15%;
+  overflow: auto;
+  background: cover;
+
+  border-width: 1px;
+border: solid;
+border-color: #363636;
+}
+.useridinput {
+display: flex;
+float: right;
+}
+.loginbutton {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.aboutus p {
+
+  justify-content: center;
+  text-align: center;
+}
+.aboutus img{
+margin-left: 23%;
+}
+.searchbyname {
+  padding: 20px;
+}
+.cssmenu h1 {
+  color: white;
+}
+.cssmenu {
+  background: #db1f47;
+  width: auto;
+  text-align: left;
+}
+.cssmenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+.cssmenu ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.cssmenu ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.cssmenu.align-right ul li {
+  float: right;
+}
+.cssmenu.align-center ul {
+  text-align: center;
+}
+.cssmenu ul li span {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 7px 27px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+.cssmenu ul li span:hover {
+  color: #333333;
+}
+.cssmenu ul li span:hover:before {
+  width: 100%;
+}
+.cssmenu ul li span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: #ffffff;
+  opacity: .5;
+}
+.cssmenu ul li span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #333333;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+.cssmenu ul li.last > a:after,
+.cssmenu ul li:last-child > a:after {
+  display: none;
+}
+.cssmenu ul li.active a {
+  color: #333333;
+}
+.cssmenu ul li.active a:before {
+  width: 100%;
+}
+.cssmenu.align-right li.last > a:after,
+.cssmenu.align-right li:last-child > a:after {
+  display: block;
+}
+.cssmenu.align-right li:first-child a:after {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .cssmenu ul li {
+    float: none;
+    display: block;
+  }
+  .cssmenu ul li span {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #fb998c;
+  }
+  .cssmenu ul li.last > a,
+  .cssmenu ul li:last-child > a {
+    border: 0;
+  }
+  .cssmenu ul li span:after {
+    display: none;
+  }
+  .cssmenu ul li span:before {
+    display: none;
+  }
+}
+
+.map {
+
+
+  align-items: center;
+  justify-content: center;
+}
+
+.Submit {
+  display: block;
+  margin: 0 auto;
+}
+.Submit input {
+	outline: none;
+  align-items: center;
+  justify-content: center;
+}
+.Submit input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+.Submit input::-webkit-search-decoration,
+ .Submit input::-webkit-search-cancel-button {
+	display: none;
+}
+
+
+.Submit input[type=search] {
+	background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+.Submit input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #66CC75;
+
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+.Submit input:-moz-placeholder {
+	color: #999;
+}
+.Submit input::-webkit-input-placeholder {
+	color: #999;
+}
+
+
+
+
+.photo {
+  display: inline-block;
+  padding: 20px;
+  margin-left: 20px;
+  /*float: right;*/
+
+}
+
+.signupform {
+  padding: 40px;
+}
