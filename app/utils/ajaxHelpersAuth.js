@@ -1,7 +1,7 @@
 var axios = require('axios');
 
 module.exports = {
-  baseUrl: 'http://hidden-agenda-rails-backend.herokuapp.com',
+  baseUrl: 'https://hidden-agenda-rails-backend.herokuapp.com',
 
   getPhotos: function(afterAjaxFxn) {
     const uid = localStorage.uid;

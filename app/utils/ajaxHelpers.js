@@ -6,7 +6,7 @@ const ajaxHelpers = {
   },
 
   getUserAgenda: function(){
-    return axios.get('http://hidden-agenda-rails-backend.herokuapp.com/photos')
+    return axios.get('https://hidden-agenda-rails-backend.herokuapp.com/photos')
   },
 
   getMapResults: function(lat, lng){
@@ -14,7 +14,7 @@ const ajaxHelpers = {
   },
 
   addAgenda: function(photo_rails){
-    return axios.post('http://hidden-agenda-rails-backend.herokuapp.com/photos', photo_rails);
+    return axios.post('https://hidden-agenda-rails-backend.herokuapp.com/photos', photo_rails);
   },
 
 }
