@@ -2,6 +2,11 @@ import React from 'react';
 import ajaxHelpers from '../utils/ajaxHelpers';
 
 const AgendaComponent = React.createClass({
+  getInitialState: function(){
+    return {
+      agenda: []
+    }
+  },
 
 
   componentDidMount:function(){
