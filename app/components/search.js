@@ -7,10 +7,13 @@ const SearchName = React.createClass({
     const inputstyle = {
       fontSize: '30px'
     }
-    
+    const h3Style = {
+        textAlign: 'left'
+    }
+
     return(
       <div className='searchbyname'>
-        <h3>Search by Name:</h3>
+        <h3 style={h3Style}>Search by Name:</h3>
         <input style={inputstyle} onChange={this.props.onChangeName} value={this.props.markerCityName} type='text' placeholder='search by name' />
         <Button waves='light' className="Submit" onClick={this.props.onSubmit} type='button'>Submit!</Button>
 
