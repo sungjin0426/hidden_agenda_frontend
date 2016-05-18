@@ -40,9 +40,11 @@ const DisplayResults = React.createClass({
               <img onClick={this.onSavePhoto.bind(this, photo)} src={"https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg"} />
           </div>
         }.bind(this));
-
+    const displayStyle = {
+      textAlign: 'center'
+    }
     return (
-      <div>
+      <div style={displayStyle}>
         {TravelPics}
       </div>
     );

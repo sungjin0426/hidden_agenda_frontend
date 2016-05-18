@@ -6,6 +6,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-align: center;
 }
 
 
@@ -24,13 +25,10 @@ padding: 20px;
 .photo img {
   width: 400px;
   height: 250px;
-  margin: 15%;
   overflow: auto;
-  background: cover;
-
   border-width: 1px;
-border: solid;
-border-color: #363636;
+  border: solid;
+  border-color: #363636;
 }
 .useridinput {
 display: flex;
@@ -236,15 +234,9 @@ margin-left: 23%;
 	color: #999;
 }
 
-
-
-
 .photo {
   display: inline-block;
   padding: 20px;
-  margin-left: 20px;
-  /*float: right;*/
-
 }
 
 .signupform {
