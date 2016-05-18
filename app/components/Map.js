@@ -50,9 +50,6 @@ const MapGS = React.createClass({
         ajaxHelpers.getResults(cityName)
         .then(function(res){
           console.log("this is photo by cityname", res);
-          this.setState({
-            ajaxReturnMap: response.data.photos.photo
-          });
         }.bind(this));
      });
     }
