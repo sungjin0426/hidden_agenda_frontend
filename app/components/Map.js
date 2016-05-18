@@ -1,18 +1,42 @@
 import React from 'react';
 import APIk from '../utils/key';
 import ajaxHelpers from '../utils/ajaxHelpers';
+import SearchName from './Search';
+import DisplayResults from './DisplayResults';
 
 const MapGS = React.createClass({
 
   getInitialState:function(){
     return {
-      ajaxReturnMap: [],
+      ajaxReturn: [],
       lat: '',
-      lng: ''
+      lng: '',
+      cityName: '',
+      markerCityName: ''
     }
   },
 
-  handleMapDisplay(){
+  onChangeName: function(e) {
+    console.log('Searching!');
+    this.setState({
+      cityName: e.target.value
+    })
+  },
+
+
+handleSubmit: function() {
+  console.log("HANDLESUBMIT");
+  let cityName = this.state.cityName;
+  ajaxHelpers.getResults(cityName)
+  .then(function(response){
+    console.log(response);
+    this.setState({
+      ajaxReturn: response.data.photos.photo
+      });
+    }.bind(this));
+  },
+
+  handleMapDisplay: function(){
     navigator.geolocation.getCurrentPosition(function(position) {
     console.log("user latitude" + position.coords.latitude);
     console.log("user longitude" + position.coords.longitude);
@@ -45,12 +69,12 @@ const MapGS = React.createClass({
       ajaxHelpers.getMapResults(lat, lng)
       .then(function(response){
         console.log("this is the response", response);
-        let cityName = response.data.places.place[0].woe_name;
-        console.log("this is cityname", cityName)
-        ajaxHelpers.getResults(cityName)
+        let markerCityName = response.data.places.place[0].woe_name;
+        console.log("this is marker cityname", markerCityName)
+        ajaxHelpers.getResults(markerCityName)
         .then(function(res){
-          console.log("this is photo by cityname", res);
-        }.bind(this));
+          console.log("this is photo by marker cityname result", res);
+      }.bind(this));
      });
     }
   })
@@ -73,6 +97,10 @@ const MapGS = React.createClass({
           {this.handleMapDisplay()}
         </div>
         <pre id='coordinates'></pre>
+        <SearchName onChangeName={this.onChangeName}
+                    onSubmit={this.handleSubmit}
+          />
+        <DisplayResults photos={this.state.ajaxReturn} />
       </div>
     )
   }

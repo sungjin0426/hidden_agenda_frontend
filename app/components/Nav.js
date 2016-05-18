@@ -47,6 +47,20 @@ const Nav = React.createClass({
 
   render: function() {
     const isLoggedIn = auth.loggedIn();
+    const logoutbtn = {
+          color: '#FFFFFF',
+          backgroundColor: 'transparent',
+          border: '0',
+          textDecoration: 'none',
+          display: 'block',
+          padding: '7px 27px',
+          fontFamily: 'Open Sans, sans-serif',
+          fontWeight: '700',
+          textTransform: 'uppercase',
+          fontSize: '14px',
+          position: 'relative',
+          margin: '0 10px 0 10px'
+    }
 
     if (isLoggedIn) {
       return (
@@ -56,11 +70,9 @@ const Nav = React.createClass({
              <li><Link to='/'><span>Home</span></Link></li>
              <li><Link to="/About"><span>About</span></Link></li>
              <li className='last'><a href='mailto:hiddenagendawdi@yahoo.com'><span>Contact us</span></a></li>
-             <li><Link to="/AgendaComponent"><span>Save Agenda</span></Link></li>
+             <li><Link to="/AgendaComponent"><span>My Agenda</span></Link></li>
              <li>
-               <div className='useridinput'>
-                 <Button onClick={ () => this.handleLogout() }>Logout</Button>
-                </div>
+                 <button style={logoutbtn} onClick={ () => this.handleLogout() }>Logout</button>
               </li>
             </ul>
           </div>
