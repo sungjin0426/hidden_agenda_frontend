@@ -67,6 +67,7 @@ const Nav = React.createClass({
         <div className='cssmenu'>
           <div className='menu'>
             <ul>
+             <li className='title-app'>HIDDEN AGENDA</li>
              <li><Link to='/'><span>Home</span></Link></li>
              <li><Link to="/About"><span>About</span></Link></li>
              <li className='last'><a href='mailto:hiddenagendawdi@yahoo.com'><span>Contact us</span></a></li>
@@ -84,6 +85,7 @@ const Nav = React.createClass({
       <div className='cssmenu'>
         <div className='menu'>
         <ul>
+         <li className='title-app'>HIDDEN AGENDA</li>
          <li><Link to='/'><span>Home</span></Link></li>
          <li><Link to="/About"><span>About</span></Link></li>
          <li className='last'><a href='mailto:hiddenagendawdi@yahoo.com'><span>Contact us</span></a></li>

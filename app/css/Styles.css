@@ -20,6 +20,17 @@ padding: 20px;
 
 }
 
+.title-app {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 7px 27px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+}
 
 .photo img {
   width: 400px;

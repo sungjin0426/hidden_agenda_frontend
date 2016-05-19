@@ -14,14 +14,14 @@ const About = React.createClass({
         </p>
         <h4>Created by</h4>
         <ul style={ulStyle}>
-          <li><a href="https://www.linkedin.com/in/sumitb87">Sumit Bhasin</a></li>
-          <li><a href="https://www.linkedin.com/in/stephenbreuhaus">Stephen Breuhaus</a></li>
-          <li><a href="https://www.linkedin.com/in/sungjlee87">Sung Jin Lee</a></li>
+          <li><a href="https://www.linkedin.com/in/sumitb87" target='_blank'>Sumit Bhasin</a></li>
+          <li><a href="https://www.linkedin.com/in/stephenbreuhaus" target='_blank'>Stephen Breuhaus</a></li>
+          <li><a href="https://www.linkedin.com/in/sungjlee87" target='_blank'>Sung Jin Lee</a></li>
         </ul>
         <h4>Source Code</h4>
         <ul style={ulStyle}>
-          <li><a href="https://github.com/sungjin0426/hidden_agenda_frontend">GitHub - Frontend</a></li>
-          <li><a href="https://github.com/sungjin0426/hidden_agenda_backend">GitHub - Backend</a></li>
+          <li><a href="https://github.com/sungjin0426/hidden_agenda_frontend" target='_blank'>GitHub - Frontend</a></li>
+          <li><a href="https://github.com/sungjin0426/hidden_agenda_backend" target='_blank'>GitHub - Backend</a></li>
         </ul>
       </div>
     );

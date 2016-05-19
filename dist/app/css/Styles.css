@@ -11,16 +11,25 @@ body {
 
 
 .photo-layout {
-
 float: left;
 display: flex;
 /*overflow:visible;*/
 border-spacing: 20px;
 padding: 20px;
-
-
 }
 
+.title-app {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 7px 27px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  position: relative;
+  margin-left: 20px;
+}
 
 .photo img {
   width: 400px;
@@ -79,7 +88,6 @@ float: right;
 .cssmenu ul li {
   display: inline-block;
   padding: 0;
-  margin: 0;
 }
 .cssmenu.align-right ul li {
   float: right;
