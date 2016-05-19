@@ -42,11 +42,13 @@ float: right;
 .aboutus p {
 
   justify-content: center;
+  padding: 0 40px 20px 40px;
+}
+
+.aboutus img{
   text-align: center;
 }
-.aboutus img{
-margin-left: 23%;
-}
+
 .searchbyname {
   padding: 20px;
 }

@@ -36,7 +36,17 @@ handleSubmit: function() {
     }.bind(this));
   },
 
+  handleCityName: function(city){
+    this.setState({
+      markerCityName: city
+    }, function(){
+      console.log(this.state.markerCityName);
+      document.getElementById("searchBoxCity").value = this.state.markerCityName;
+    })
+  },
+
   handleMapDisplay: function(){
+    var newHandleCityName = this.handleCityName;
     navigator.geolocation.getCurrentPosition(function(position) {
     console.log("user latitude" + position.coords.latitude);
     console.log("user longitude" + position.coords.longitude);
@@ -56,7 +66,6 @@ handleSubmit: function() {
     marker.on('dragend', ondragend);
     Window.map.scrollWheelZoom.disable();
 
-
     // Set the initial marker coordinate on load.
     ondragend()
 
@@ -71,10 +80,7 @@ handleSubmit: function() {
         console.log("this is the response", response);
         let markerCityName = response.data.places.place[0].woe_name;
         console.log("this is marker cityname", markerCityName)
-        ajaxHelpers.getResults(markerCityName)
-        .then(function(res){
-          console.log("this is photo by marker cityname result", res);
-      }.bind(this));
+        newHandleCityName(markerCityName);
      });
     }
   })
