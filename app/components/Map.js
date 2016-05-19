@@ -30,6 +30,9 @@ handleSubmit: function() {
   ajaxHelpers.getResults(cityName)
   .then(function(response){
     console.log(response);
+    if(response.data.photos.photo[0] == null){
+      alert("There doesn't appear to be any photos from here!")
+    }
     this.setState({
       ajaxReturn: response.data.photos.photo
       });
@@ -38,10 +41,10 @@ handleSubmit: function() {
 
   handleCityName: function(city){
     this.setState({
-      markerCityName: city
+      cityName: city
     }, function(){
-      console.log(this.state.markerCityName);
-      document.getElementById("searchBoxCity").value = this.state.markerCityName;
+      console.log(this.state.cityName);
+      document.getElementById("searchBoxCity").value = this.state.cityName;
     })
   },
 
